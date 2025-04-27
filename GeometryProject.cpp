@@ -344,7 +344,7 @@ int main(){
                 cout<<"Opción no válida\n"<<endl;
             }
         }else if(abs(product) < 1e-5){ //product == 0
-            if(product + plane.getvecteg().at(3)<1e-5){
+            if(abs(line.getPointp().at(0) * plane.getvecteg().at(0) + line.getPointp().at(1) * plane.getvecteg().at(1) + line.getPointp().at(2) * plane.getvecteg().at(2) + plane.getvecteg().at(3))<1e-5){
                 cout<<"Son coincidentes\n";
             }else{
                 cout<<"Son paralelos\n";
